@@ -1,0 +1,55 @@
+
+
+
+
+<ion-view>
+	<ion-nav-buttons class="button">
+		<div class="bar bar-header item-input-inset" id='sou'>
+		  <label class="item-input-wrapper lab">
+		    <i class="icon ion-ios-search placeholder-icon"></i>
+		    <input type="search" placeholder="搜索感兴趣的内容" ng-model="int">
+		    
+		  </label>
+		  <button class="button button-clear">
+		    <i class='icon ion-qr-scanner'></i>
+		  </button>
+		</div>
+	</ion-nav-buttons>
+	<div class="tabs-striped tabs-color-dark tabs-top">
+		    <div class="tabs">
+		      <a class="tab-item active" >
+		       内容
+		      </a>
+		      <a class="tab-item" >
+		       
+		       社区
+		      </a>
+		      <a class="tab-item">
+		         关注
+		      </a>
+		    </div> 
+		</div>
+	<ion-content class="has-subheader">
+		<ion-list>
+		   	   <ion-item class='dll' ng-repeat="tu in ima">
+		   	   	  <dl class='dkl'>
+		   	   	  	<dt><img ng-src={{tu.o}} /></dt>
+		   	   	  	<dd class='ddg'>{{tu.wen}}</dd>
+		   	   	  </dl>
+		   	   </ion-item>
+		   </ion-list>
+		<div class='d-img'><img src="img/130MCY44H50-2324P.jpg" alt="" /></div>
+		<h4 class='te-i'>好物</h4>
+		
+		<ion-list>
+		   	   <ion-item class='dll' ng-repeat="tt in yu">
+		   	   	  <dl class='dkl'>
+		   	   	  	<dt><img ng-src={{tt.o}} /></dt>
+		   	   	  	<dd class='ddg'>{{tt.wen}}</dd>
+		   	   	  </dl>
+		   	   </ion-item>
+		   </ion-list>
+		
+	</ion-content>	   
+		
+</ion-view>

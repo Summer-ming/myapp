@@ -1,0 +1,246 @@
+/* Empty. Add your own CSS if you like */
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+
+.hh{
+	color:#69717D;
+}
+ .item-body h3{
+	margin-top:0;
+}
+.hh3{
+	width:200px;
+}
+.hh4{
+	width:210px;
+	padding-left:20px;
+}
+.pad{
+	width:200px;white-space: wrap;overflow:hidden;
+	text-overflow: ellipsis;
+	height:60px;
+}
+.item p{
+	font-size:12px;
+}
+.im{
+	height:auto;width:80px;
+}
+.tu{
+	height:auto;width:40px;position:absolute;
+	left: 35px;
+    top: 50px;
+    filter:(alpha=50);
+    opacity:0.5;
+}
+.ppo{
+	padding-left:0;
+	border:0;
+	border-color:none;
+}
+.ppoo{
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.3); 
+}
+.wen-i{
+	    height: auto;
+    width: 63px;
+    position: absolute;
+    filter: (alpha=50);
+    opacity: 0.5;
+    left: 147px;
+    top: 143px;
+}
+.s2{
+	text-align:center;font-size:15px;
+}
+.s3{
+	text-align:center;
+}
+.diso img{
+	width:300px;height:auto;
+	margin-left:6%;
+}
+.hh6{
+	text-indent: 2em;color:#999999;
+}
+.te-a{
+	color:#999999;
+}
+.aa{
+	background:#CCCCCC;;
+}
+.pk{
+	    text-align: center;
+    color: #CCCCCC;
+    width: 100px;
+    position: absolute;
+    top: -11px;
+    left: 109px;
+    background: #fff
+}
+.dop{
+	border-top:1px solid #C0C0C0;position:relative;width: 347px;
+    margin: 64px auto;
+}
+.ping{
+	    text-align: center;
+    background:#F5F5F5;
+    height: 60px;
+    line-height: 60px;
+}
+.db{
+	margin-bottom:0;
+}
+.car{
+	    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.a1{
+	margin-left: 58px;
+}
+.a2{
+	margin-top:-4px;
+}
+.a3{
+	width:100px;    float: right;
+}
+#sou{
+	margin-left: 72px;
+    margin-top: -3px;
+}
+.lab{
+	margin-right: 26px;
+}
+.dll{
+	float:left;border:0;
+}
+.dll img{
+	width: 93px;
+    height: auto;
+}
+.ddg{
+	    text-align: center;
+}
+.dkl{
+	margin-bottom:0;
+}
+.d-img{
+	margin-left:16px;
+}
+.te-i{
+	text-align:center;
+}
+.desc{
+	position: absolute;
+    left: 12px;
+    bottom: 25px;
+    color: #fff;
+}
+.desc span {
+    display: block;
+}
+.desc .time {
+    font-size: 12px;
+}
+.desc .h1 {
+    font-size: 20px;color: #fff;
+}
+.jujia{
+	float:left;border:0;
+}
+.jujia img{
+	height:auto;
+	width:60px;
+}
+#hui{
+	position:relative;
+}
+.huiyuan{
+	display:block;
+	position:absolute;
+	font-size:26px;color:#fff;
+	left: 55px;
+    top: 53px;
+}
+.shijian{
+	position:absolute;
+	width: 143px;
+    top: 108px;
+    left: 92px;color:red;
+}
+.shijian span{
+	display:inline-block;
+	width:40px;border:1px solid #fff;height: 40px;text-align:center;
+	line-height:40px;font-size:16px;
+}
+.jiemao{
+	width:80px;height:auto;
+}
+#by{
+	padding-left: 319px
+}
+.bg{
+	background:url(../img/14.jpeg) no-repeat;width:100%;
+	/*background:#A2A2A2;filter:(alpha=50);opacity:0.5;*/position:relative;
+	height: 574px;
+}
+.con{
+	background:#F2F2F2;
+}
+.p-zhu{
+	height:80px;line-height:80px;opacity:0.5;text-indent: 4em;
+}
+.p-shou{
+	background:#fff;height:60px;line-height: 60px;
+    text-align: center;
+}
+#in-shou{
+	display:inline;    margin-left: 15px;
+    line-height: 66px;
+}
+.p-yan{
+	background:#fff;height:60px;line-height: 60px;
+    text-align: center;
+}
+#int-yan{display:inline;  
+	line-height: 60px;    margin-left: -32px;
+}
+.p-she{
+	height:20px;color:#69717D;padding-top:100px;text-indent: 4em;
+}
+.tu-biao{
+	float:left;margin:0 20px;border-style:none;
+}
+.xin-l{
+	
+}
+.tu-biao img{
+	height:auto;width:26px;
+}
+#lis-q{
+	position:absolute;top: 382px;background:#fff;width:100%;
+}
+#lis-u{
+	background:#fff;width:100%;position: absolute;
+        top: 78px;
+}
+.tu-biao dd{
+	font-size:14px;line-height:28px;
+}
+#deng{
+	top: 35px;background:#fff;
+}
+#a-mima{
+	color:red;position: absolute;
+    top: 426px;    margin-left: 10px; text-decoration:none;
+}
+#i-menu{
+	position:relative;
+}
+.menu-li{
+	position:absolute;left: -35px;
+}
+.menu-li li{
+	    width: 68px;display:none;
+}
+#jia{
+	right:0;float:right;
+}

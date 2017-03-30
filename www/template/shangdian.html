@@ -1,0 +1,56 @@
+
+
+
+
+
+
+<ion-view view-title='堆糖商店'>
+	<ion-content>
+		<ion-slide-box on-slide-changed="slideHasChanged($index)" style="width:100%;height:200px;overflow:hidden" auto-play='true' does-continue="true" slide-interval=2000>
+		  <ion-slide><a href="" class="box"><img style="width:100%;height:200px;" src="img/2.jpg" alt="" />
+		   <span class='desc'>
+		   	<span class="time">2017年03月29日</span>
+		   	 <span class="h1">买卫衣才是正经事</span>
+		   </span>
+		  </a></ion-slide>
+		  <ion-slide><a href="" class="box"><img style="width:100%;height:200px;" src="img/c1.jpeg" alt="" /></a></ion-slide>
+		  <ion-slide><a href="" class="box"><img style="width:100%;height:200px;" src="img/c.jpeg" alt="" /></a></ion-slide>
+        </ion-slide-box>
+        
+           <ion-list>
+           	     <ion-item class='jujia' ng-repeat="ss in kl">
+           	     	<dl class='dkl'>
+           	     		<dt><img ng-src={{ss.o}}/> </dt>
+           	     		<dd class='ddg'>{{ss.wen}}</dd>
+           	     	</dl>
+           	     </ion-item>
+           </ion-list>
+             <h4 style='text-align:center'>专题</h4>
+           <div class='d-img' id='hui'><img src="img/130MCY44H50-2324P.jpg" alt="" />
+               <span class='huiyuan'>-会员折扣 . 周三早场-</span>
+               <div class=shijian>
+               	<span class='j2'></span>:
+               	<span class='j3'></span>:
+               	<span class='j4'></span>
+               </div>
+           </div>
+             <ion-slide-box show-pager="flase" on-slide-changed="slideHasChanged($index)">
+			  <ion-slide class='jiemao' style='display:flex;' does-continue="true">
+			  	<dl ng-repeat="kk in lo">
+			  	<dt><img ng-src={{kk.p}} alt="" /></dt>
+			  	<dd>{{kk.m}}</dd>
+			  	<dd>{{kk.price}}</dd>
+			    </dl> 
+			    
+			  </ion-slide>
+			  
+			  
+			</ion-slide-box>
+            
+            
+            
+            
+        
+           
+	</ion-content>
+</ion-view>

@@ -1,0 +1,269 @@
+
+
+
+<ion-view view-title='首页' ng-controller='ctrl'>
+	<ion-nav-buttons class="button" id='jia'>
+		<button class="button button-clear ">
+			<i class="icon ion-android-add"></i>
+		</button>
+	</ion-nav-buttons>
+<div class="tabs-striped tabs-color-dark tabs-top">
+    <div class="tabs" id="tabs">
+      <a class="tab-item active" href="#">
+       每日精选
+      </a>
+      <a class="tab-item" href="#">
+       
+       美容时尚
+      </a>
+      <a class="tab-item" href="#">
+         美食手札
+      </a>
+       <a class="tab-item" href="#">
+         住家生活
+      </a>
+    </div> 
+  </div>
+<ion-content class='has-subheader'>
+<ion-slide-box on-slide-changed="slideHasChanged($index)" style="width:100%;height:200px;overflow:hidden" auto-play='true' does-continue="true" slide-interval=2000>
+	  <ion-slide><a href="" class="box"><img style="width:100%;height:200px;" src="img/2.jpg" alt="" /></a></ion-slide>
+	  <ion-slide><a href="" class="box"><img style="width:100%;height:200px;" src="img/1.jpg" alt="" /></a></ion-slide>
+	  <ion-slide><a href="" class="box"><img style="width:100%;height:200px;" src="img/3.jpg" alt="" /></a></ion-slide>
+</ion-slide-box>
+  
+  <div class="list card" ng-repeat="(k,arr) in ls" >
+  	<div class="item item-avatar">
+    <img ng-src={{arr.img}} >
+    <h4 class='hh'>{{arr.h1}}</h4>
+    <p>{{arr.p1}}</p> 
+  </div>
+   <div>
+	<div class="item item-body" style="float:left;">
+		<h3 class='hh3'>{{arr.s1}}</h3>
+    <p class=pad>
+      {{arr.t1}}
+    </p>
+    <p>
+      <a href="#" class="subdued">{{arr.a1}}</a>
+      <a href="#" class="subdued">{{arr.f1}}}</a>
+    </p>
+  </div>
+  <div class='item' style="float:right">
+  	<a href='#/tab/xiangqing/{{k}}'><img class="full-image im" ng-src={{arr.ig}} ></a>
+  	
+  	<img class='tu' ng-src={{arr.g1}}/>
+  </div>
+</div>
+</div>
+   
+ <!--  <div class='item'>
+   	<img src="img/130MCY44H50-2324P.jpg" alt="" />
+   	<h2>美丽动人</h2>
+   </div>-->
+  
+  <!--<div class="list card">
+    <div class="item item-avatar">
+    <img src="img/g (3).jpg">
+    <h4 class='hh'>Zoe加乌乔</h4>
+    <p>November 05, 1990</p> 
+  </div>
+   <div>
+	<div class="item item-body" style="float:left;">
+		<h3>美国化妆品界的"大众点<br/>评"做了一份可信度<br/>95%调查</h3>
+    <p class=pad>
+      最近inFluenster网站的beauty类别做了一个调查，找了5448位平均年龄的女性消费者，聊。。。
+    </p>
+    <p>
+      <a href="#" class="subdued">30 Like</a>
+      <a href="#" class="subdued">79 Comments</a>
+    </p>
+  </div>
+  <div class='item' style="float:right">
+  	<img class="full-image im "src="img/00_0.jpeg">
+  	<img class='tu' src="img/timg.jpg" alt="" />
+  </div>
+</div>
+</div>
+
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/g.jpg">
+    <h4 class='hh'>雪白滴熊</h4>
+    <p>November 03, 1957</p> 
+  </div>
+<div>
+	<div class="item item-body" style="float:left;">
+		<h3>"房子是租的,但生活不<br/>是"北漂妹子手把手教你纸<br/>藤手工花篮</h3>
+    <p class=pad>
+     生活需要多一些仪式感,手工情物,一生长存......
+    </p>
+    <p>
+      <a href="#" class="subdued">6 Like</a>
+      <a href="#" class="subdued">15 Comments</a>
+    </p>
+  </div>
+  <div class='item' style="float:right">
+  	<img class="full-image im "src="img/700.jpeg">
+  	<img class='tu' src="img/timg.jpg" alt="" />
+  </div>
+</div>
+</div>
+  
+  <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/01.jpeg">
+    <h4 class='hh'>litlethin恋物志</h4>
+    <p>November 07, 1991</p> 
+  </div>
+<div>
+	<div class="item item-body" style="float:left;">
+		<h3>我们身处的世界，是一幅<br/>巨大的拼贴</h3>
+    <p class=pad>
+      第一次看到日本拼贴艺术家Q-TA的作品<br/>的作品，就仿佛爱丽丝发现了兔子<br/>洞，跌进了一个奇妙的世界。
+    </p>
+    <p>
+      <a href="#" class="subdued">8 Like</a>
+      <a href="#" class="subdued">9 Comments</a>
+    </p>
+  </div>
+  <div class='item' style="float:right">
+  	<img class="full-image im "src="img/11.jpeg">
+  	<img class='tu' src="img/timg.jpg" alt="" />
+  </div>
+</div>
+</div>
+
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/02.jpeg">
+    <h4 class='hh'>喵招</h4>
+    <p>November 10, 1995</p> 
+  </div>
+<div>
+	<div class="item item-body" style="float:left;">
+		<h3>多余的毛线不要扔！<br/>自制环保快干洗碗球</h3>
+    <p class=pad>
+     晴纶毛线很多妹子都会有，平时<br/>织围巾会剩下一些毛线，扔了很可惜<br/>不如做一个温和又快干的洗。。。
+    </p>
+    <p>
+      <a href="#" class="subdued">89 Like</a>
+      <a href="#" class="subdued">100 Comments</a>
+    </p>
+  </div>
+  <div class='item' style="float:right">
+  	<img class="full-image im "src="img/12.jpeg">
+  	<img class='tu' src="img/timg.jpg" alt="" />
+  </div>
+</div>
+</div>
+  
+  <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/03.jpeg">
+    <h4 class='hh'>Airphoto</h4>
+    <p>November 01, 1993</p> 
+  </div>
+<div>
+	<div class="item item-body" style="float:left;">
+		<h3>学会这几招，让你的手机<br/>自拍帅到没朋友！</h3>
+    <p class=pad>
+      记得有一次吃饭的时候，听到隔壁<br/>桌一个妹子吵嚷和另一个妹子说：你好漂亮。
+    </p>
+    <p>
+      <a href="#" class="subdued">4 Like</a>
+      <a href="#" class="subdued">56Comments</a>
+    </p>
+  </div>
+  <div class='item' style="float:right">
+  	<img class="full-image im "src="img/13.jpeg">
+  	<img class='tu' src="img/timg.jpg" alt="" />
+  </div>
+</div>
+</div>
+
+
+  <div class="list card">
+  	<div class="item item-avatar">
+    <img src="img/04.jpg">
+    <h4 class='hh'>小蘑菇转圈圈</h4>
+    <p>November 02, 1992</p> 
+  </div>
+   <div>
+	<div class="item item-body" style="float:left;">
+		<h3>高颜值。自制巧克力蛋糕<br/>棒棒糖</h3>
+    <p class=pad>
+      原料准备：鸡蛋一个砂糖40g黄油<br/>40g
+    </p>
+    <p>
+      <a href="#" class="subdued">3 Like</a>
+      <a href="#" class="subdued">9 Comments</a>
+    </p>
+  </div>
+  <div class='item' style="float:right">
+  	<img class="full-image im "src="img/14.jpeg">
+  	<img class='tu' src="img/timg.jpg" alt="" />
+  </div>
+</div>
+</div>-->
+   
+   <!--<div class='item'>
+   	<img src="img/130MCY44H50-2324P.jpg" alt="" />
+   	<h2>美丽动人</h2>
+   </div>-->
+ <!-- 
+  <div class="list card">
+    <div class="item item-avatar">
+    <img src="img/05.jpeg">
+    <h4 class='hh'>取暖生活美学</h4>
+    <p>November 10, 1991</p> 
+  </div>
+   <div>
+	<div class="item item-body" style="float:left;">
+		<h3>有没有一样神器，让我不<br/>洗头也能出门</h3>
+    <p class=pad>
+      大家好我是小暖，不知道各位暖<br/>宝宝是否和小暖有过一样的窘境。
+    </p>
+    <p>
+      <a href="#" class="subdued">33 Like</a>
+      <a href="#" class="subdued">76 Comments</a>
+    </p>
+  </div>
+  <div class='item' style="float:right">
+  	<img class="full-image im "src="img/15.jpeg">
+  	<img class='tu' src="img/timg.jpg" alt="" />
+  </div>
+</div>
+</div>
+
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/06.jpeg">
+    <h4 class='hh'>大奥特曼的小怪兽</h4>
+    <p>November 04, 1997</p> 
+  </div>
+<div>
+	<div class="item item-body" style="float:left;">
+		<h3>由海洋之歌引起的思<br/>考--动物电影存在的价值</h3>
+    <p class=pad>
+     室友突然和我说，让我推荐一部电<br/>影一下子很茫然。。
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">0 Comments</a>
+    </p>
+  </div>
+  <div class='item' style="float:right">
+  	<img class="full-image im "src="img/16.jpeg">
+  	<img class='tu' src="img/timg.jpg" alt="" />
+  </div>
+</div>
+</div>-->
+</ion-content >
+  
+
+</ion-view>

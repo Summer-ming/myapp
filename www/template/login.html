@@ -1,0 +1,52 @@
+
+
+
+<ion-view view-title="登录"> 
+	
+	<ion-nav-buttons class="button" >
+		<button class="button button-clear" ng-click='tab()'>
+			<i class="icon ion-android-arrow-back"></i>
+		</button>
+	</ion-nav-buttons>
+	  
+	    <ion-content class='con' style="min-height:600px;">
+	    	
+	   	      <p class='p-zhu'>使用社交网站账号登录</p>
+	   	     
+	   	       <ion-list id='lis-u'>
+	   	       	    <ion-item class='tu-biao'>
+	   	       	    	<dl>
+	   	       	    		<dt style="margin-bottom:6px"><img src="img/xin.jpg" alt="" /></dt>
+	   	       	    		<dd class='xin-l'>新浪微博</dd>
+	   	       	    	</dl>
+	   	       	    </ion-item>
+	   	       	    <ion-item class='tu-biao'>
+	   	       	    	<dl>
+	   	       	    		<dt><img src="img/qq.jpg" alt="" /></dt>
+	   	       	    		<dd>QQ</dd>
+	   	       	    	</dl>
+	   	       	    </ion-item>
+	   	       	    <ion-item class='tu-biao'>
+	   	       	    	<dl>
+	   	       	    		<dt style="margin-bottom:6px"><img src="img/wei.jpg" alt="" /></dt>
+	   	       	    		<dd>微信</dd>
+	   	       	    	</dl>
+	   	       	    </ion-item>
+	   	       </ion-list>
+	<p class='p-she' style='padding-top:188px;'>使用堆糖账号登录</p>
+	
+	                 <div class="list" id='deng'>
+						  <label class="item item-input">
+						    <input type="text" placeholder="输入手机号/邮箱/昵称"  ng-change="hh(shouji)" ng-model="shouji" >
+						    <p class='p-s'></p>
+						  </label>
+						  <label class="item item-input">
+						    <input type="text" placeholder="输入密码">
+						    
+						  </label>
+						 
+					 </div>
+	              <a  id='a-mima' href="">忘记密码</a>
+	            
+	    </ion-content>
+</ion-view>
