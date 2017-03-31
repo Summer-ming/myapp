@@ -36,6 +36,33 @@ angular.module('starter', ['ionic'])
 	 	    	}
 	 	    }
 	 })
+	 .state("tabs.meirong",{ 
+	 	   url:"/meirong",
+	 	    views:{
+	 	    	'tab-home':{
+	 	    		 templateUrl:'template/meirong.html',
+	 	    		 controller:"meictrl"
+	 	    	}
+	 	    }
+	 })
+	  .state("tabs.meishi",{ 
+	 	   url:"/meishi",
+	 	    views:{
+	 	    	'tab-home':{
+	 	    		 templateUrl:'template/meishi.html',
+	 	    		 controller:"shictrl"
+	 	    	}
+	 	    }
+	 })
+	   .state("tabs.zhujia",{ 
+	 	   url:"/zhujia",
+	 	    views:{
+	 	    	'tab-home':{
+	 	    		 templateUrl:'template/zhujia.html',
+	 	    		 controller:"zhuctrl"
+	 	    	}
+	 	    }
+	 })
 	 .state("tabs.xiangqing",{ 
 	 	   url:"/xiangqing/:id",
 	 	    views:{
@@ -51,6 +78,24 @@ angular.module('starter', ['ionic'])
 	 	  	"tab-faxian":{
 	 	  		templateUrl:'template/faxian.html',
 	 	  		controller:"ctrl2"
+	 	  	}
+	 	  }
+	 })
+	 .state("tabs.shequ",{
+	 	  url:"/shequ",
+	 	  views:{
+	 	  	"tab-faxian":{
+	 	  		templateUrl:'template/shequ.html',
+	 	  		controller:"shectrl"
+	 	  	}
+	 	  }
+	 })
+	 .state("tabs.guanzhu",{
+	 	  url:"/guanzhu",
+	 	  views:{
+	 	  	"tab-faxian":{
+	 	  		templateUrl:'template/guanzhu.html',
+	 	  		controller:"guanctrl"
 	 	  	}
 	 	  }
 	 })
@@ -102,11 +147,59 @@ angular.module('starter', ['ionic'])
 	     $scope.ls=data
 	     });
 })
-.controller("ctrl1",function($scope,$http,$stateParams){
+.controller("ctrl1",function($scope,$http,$stateParams,$ionicActionSheet){
 	  $scope.tab=function(){
 	  	window.history.go(-1);
 	  };
-	  $http({
+	  $scope.sh = function() {
+  // 显示上拉菜单
+  var hideSheet = $ionicActionSheet.show({
+    buttons: [
+      { text: '分享' },
+      { text: '切换字体' },
+      { text: '保存为图片' }
+    ],
+    cancelText: '取消',
+    cancel: function() {
+         // 这里添加取消代码
+       },
+    buttonClicked:function(index) {
+    	console.log(index)
+    	if(index == 0){
+    		console.log("shuchu");
+    		share.init({
+        title:"分享到",   //可选，默认为"分享到"
+        maskLayer:true,    //可选，遮罩层，默认为true
+        needCancel:true,  //可选，取消按钮，默认为true
+        shareTo:{
+            wb:{    //可选
+                type:"新浪微博",
+                description:"这里是分享出去的内容",
+                url:"分享的链接",
+                imgUrl:"分享的图片地址"
+            },
+            kj:{   //可选
+                type:"QQ空间",
+                title:"QQ有可选的分享标题",
+                description:"这里是分享出去的内容",
+                url:"分享的链接",
+                imgUrl:"分享的图片地址"
+            },
+             wm:{   //可选
+                type:"生成二维码",
+                url:"要生成二维码的链接"
+            }
+       	}	
+   	})
+			share.open();
+			
+   	//触发   
+    	}     	
+      return true;
+    }
+  });
+}	  
+	   $http({
 	     	url:"test1.json"
 	     }).success(function(data){
 	     //console.log(data)
@@ -125,6 +218,11 @@ angular.module('starter', ['ionic'])
 	     
 })
 .controller("ctrl2",function($scope,$http){
+	 $scope.tab=function(){
+	  	window.history.go(-1);
+	 };
+
+
 	$http({
 	     	url:"test2.json"
 	     }).success(function(data){
@@ -176,19 +274,70 @@ $(function(){
 	 $scope.tab=function(){
 	  	window.history.go(-1);
 	  };
-	    $scope.shouji='';
+	  $scope.den=function(){
+	  	location.href="index.html"
+	  }
+	    /*$scope.deng='';*/
+	    /*$('.p-s').text("手机号可用")*/
 	  $scope.hh=function(kw){
-	  	 $scope.shouji=kw;
+	  	 $scope.deng=kw;
 	  	 var rule=/^(156|158|188)\d{8}$/
         if(rule.test(kw)){
-           $('.p-s').textContent="手机号可用"
+           $('.p-s').text("手机号可用")
+           $('.p-s').css({color:"blue"})
+          
         }
         else{
-            $('.p-s').textContent="手机号错误"
+            $('.p-s').text("手机号错误")
+            $('.p-s').css({color:"red"})
+        }
+        
+	  }
+	  $scope.mi=function(w){
+	  	 $scope.ma=w;
+	  	  var rule=/^\w{6}$/
+        if(rule.test(w)){
+            $('.p-s1').text("密码可用")
+             $('.p-s1').css({color:"blue"})
+        }
+        else{
+             $('.p-s1').text("密码错误")
+             $('.p-s1').css({color:"red"})
         }
 	  }
+	  
 })
 .controller("show-ctrl",function($scope,$http){
 	
 	 
+})
+.controller("meictrl",function($scope,$http){
+	
+	  $scope.tab=function(){
+	  	window.history.go(-1);
+	  };
+})
+.controller("shictrl",function($scope,$http){
+	
+	  $scope.tab=function(){
+	  	window.history.go(-1);
+	  };
+})
+.controller("zhuctrl",function($scope,$http){
+	
+	  $scope.tab=function(){
+	  	window.history.go(-1);
+	  };
+})
+.controller("shectrl",function($scope,$http){
+	
+	  $scope.tab=function(){
+	  	window.history.go(-1);
+	  };
+})
+.controller("guanctrl",function($scope,$http){
+	
+	  $scope.tab=function(){
+	  	window.history.go(-1);
+	  };
 })

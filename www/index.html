@@ -11,16 +11,53 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <!-- your app's js -->
     <script src='lib/ionic/js/zepto.min.js'></script>
+    <link rel="stylesheet" href="js/swiper-3.4.1.min.css" />
+    <script src='js/swiper.animate1.0.2.min.js'></script>
+    <link rel="stylesheet" href="js/animate.min.css" />
     <script src="js/app.js"></script>
   </head>
   <body ng-app="starter">
-  	<ion-nav-bar class='bar-positive' align-title="left">
+  	<!--<ion-nav-bar class='bar-positive' align-title="left">
   		  
   		
-  	</ion-nav-bar>
+  	</ion-nav-bar>-->
+  	<ion-side-menus>
+  		<ion-side-menu-content>
+			<ion-nav-bar class='bar-positive' align-title="left">
+     	    
+    </ion-nav-bar>
+      <ion-nav-view></ion-nav-view>
+		</ion-side-menu-content>
   	
   	<!--视图容器-->
-  	 <ion-nav-view></ion-nav-view>
+  	  <ion-side-menu>
+     	 <div class="bar bar-header bar-dark">
+			  <h1 class="title">个人中心</h1>
+		   </div>
+		<ion-content class="has-header">
+			<div class="list">
+
+		  <a class="item item-icon-left" href="#">
+		    <i class="icon ion-person"></i>
+		      我的账户
+		  </a>
+		   <a class="item item-icon-left" href="#">
+		    <i class="icon ion-ios-star"></i>
+		      我的收藏
+		  </a>
+		   <a class="item item-icon-left" href="#">
+		    <i class="icon ion-qr-scanner"></i>
+		      我的二维码
+		  </a>
+		   <a class="item item-icon-left" href="#">
+		    <i class="icon ion-ios-cart"></i>
+		      我的地址
+		  </a>
+  </div>
+		</ion-content>
+     </ion-side-menu>
+  	</ion-side-menus>
+  	
   	
   </body>
 </html>

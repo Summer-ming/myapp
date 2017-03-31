@@ -7,6 +7,7 @@
 		<button class="button button-clear" ng-click='tab()'>
 			<i class="icon ion-android-arrow-back"></i>
 		</button>
+		<button class="button button-clear" id='que' ng-click="den()">确定</button>
 	</ion-nav-buttons>
 	  
 	    <ion-content class='con' style="min-height:600px;">
@@ -37,12 +38,12 @@
 	
 	                 <div class="list" id='deng'>
 						  <label class="item item-input">
-						    <input type="text" placeholder="输入手机号/邮箱/昵称"  ng-change="hh(shouji)" ng-model="shouji" >
+						    <input type="text" placeholder="输入手机号/邮箱/昵称" ng-change="hh(deng)" ng-model="deng" >
 						    <p class='p-s'></p>
 						  </label>
 						  <label class="item item-input">
-						    <input type="text" placeholder="输入密码">
-						    
+						    <input type="text" placeholder="输入密码" ng-change="mi(ma)" ng-model="ma">
+						    <p class='p-s1'></p>
 						  </label>
 						 
 					 </div>

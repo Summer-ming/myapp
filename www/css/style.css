@@ -212,6 +212,14 @@ h1,h2,h3,h4,h5,h6{font-weight:normal;}
 .xin-l{
 	
 }
+#que{
+	left: 305px;
+    position: absolute;
+}
+#ding{
+	left: 305px;
+    position: absolute;
+}
 .tu-biao img{
 	height:auto;width:26px;
 }
